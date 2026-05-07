@@ -11,3 +11,11 @@ services:
         value: 20
       - key: CORS_ORIGIN
         value: https://dapur-nusantara.vercel.app
+
+  - type: web
+    name: dapur-nusantara-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    plan: free
