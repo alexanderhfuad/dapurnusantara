@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-orange-50 text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-50;
+}
