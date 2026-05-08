@@ -33,3 +33,18 @@ Setelah domain final siap:
   - Open Graph URL/image (jika ditambahkan)
 - Update `frontend/public/sitemap.xml`
 - Update `frontend/public/robots.txt`
+
+## 5) Deploy to Hostinger (Shared Hosting)
+
+### Frontend:
+1. Jalankan `npm run build` di folder `frontend`.
+2. Upload isi folder `dist` ke `public_html`.
+3. Pastikan file `.htaccess` (dari `frontend/public`) ikut terupload untuk menangani routing SPA.
+
+### Backend (Node.js Selector):
+1. Upload folder `backend` ke server (direkomendasikan di luar `public_html`).
+2. Di hPanel, buka **Node.js Dashboard**.
+3. Set **Application Root** ke folder backend Anda.
+4. Set **Application Startup File** ke file utama (misal `index.js` atau `server.js`).
+5. Pastikan Environment Variables (`PORT`, `CORS_ORIGIN`) sudah diatur di panel tersebut.
+6. Klik **Run npm install** dan **Start App**.
